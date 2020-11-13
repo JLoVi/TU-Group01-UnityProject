@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Shooting : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class Shooting : MonoBehaviour
     public float range = 100f;
 
     public Camera fpsCam;
+
+    public Text PointerText;
 
     void Update()
     {
@@ -21,6 +24,8 @@ public class Shooting : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
+            PointerText.text = hit.transform.name;
+
             Debug.Log(hit.transform.name);
         }
     }
