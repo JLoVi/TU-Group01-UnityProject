@@ -6,6 +6,8 @@ TagManager:
   tags:
   - NatureObj
   - Enemy
+  - Planet
+  - PlanetCore
   layers:
   - Default
   - TransparentFX
